@@ -2,7 +2,7 @@
     <div class="sidebar">
         <div class="user-panel">
             <div class="image text-center">
-                <img src="{{ asset('assets/img/img1.jpg') }}" class="img-circle" alt="User Image">
+                <img src="{{ asset('data/user.png') }}" class="img-circle" alt="User Image">
             </div>
             <div class="info">
                 <p>May Phyo</p>
@@ -15,21 +15,30 @@
             <li class="">
                 <a href="{{ route('home') }}"
                     class="nav-link{{ request()->routeIs('home') ? 'active bg-primary text-white' : '' }}">
-                    <i class="icon-home"></i>
+                    <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
             </li>
 
-            <li class="">
+            <li class="nav-item">
                 <a href="{{ route('country.index') }}"
-                    class="nav-link{{ request()->routeIs('country*') ? 'active bg-primary text-white' : '' }}">
-                    <i class="icon-layers"></i>
+                    class="nav-link {{ request()->routeIs('country*') ? 'active bg-primary text-white' : '' }}">
+                    <i class="fa fa-exchange"></i>
                     <span>Country</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
             </li>
 
+
+
             <li class="">
-                <a href="#">
+                <a href="{{ route('local_agent.index') }}"
+                    class="nav-link {{ request()->routeIs('local_agent*') ? 'active bg-primary text-white' : '' }}">
                     <i class="icon-layers"></i>
                     <span>Local Agents</span>
                 </a>
@@ -43,9 +52,18 @@
             </li>
 
             <li class="">
-                <a href="#">
+                <a href="{{ route('labors.index') }}"
+                    class="nav-link {{ request()->routeIs('labors*') ? 'active bg-primary text-white' : '' }}">
                     <i class="icon-layers"></i>
                     <span>Labors</span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="{{ route('reject_lists.index') }}"
+                    class="nav-link {{ request()->routeIs('reject_lists*') ? 'active bg-primary text-white' : '' }}">
+                    <i class="icon-layers"></i>
+                    <span>Reject Labor Lists</span>
                 </a>
             </li>
 
@@ -77,9 +95,12 @@
                 </a>
             </li>
 
+
+
             <li class="">
-                <a href="#">
-                    <i class="icon-list"></i>
+                <a href="{{ route('user.index') }}"
+                    class="nav-link {{ request()->routeIs('user*') ? 'active bg-primary text-white' : '' }}">
+                    <i class="icon-layers"></i>
                     <span>Users</span>
                 </a>
             </li>

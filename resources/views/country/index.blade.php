@@ -20,7 +20,7 @@
                                 <th>Option</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody style="font-size:14px">
                             @foreach ($country as $c)
                                 <tr style="text-align: center">
                                     <td>

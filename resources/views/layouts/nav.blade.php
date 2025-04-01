@@ -28,14 +28,14 @@
 
                  <!-- User Account  -->
                  <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle"
-                         data-toggle="dropdown"> <img src="{{ asset('assets/img/img1.jpg') }}" class="user-image"
-                             alt="User Image"> <span class="hidden-xs">Alexander
-                             Pierce</span> </a>
+                         data-toggle="dropdown"> <img src="{{ asset('data/user.png') }}" class="user-image"
+                             alt="User Image"> <span class="hidden-xs">May Phyo
+                         </span> </a>
                      <ul class="dropdown-menu">
                          <li class="user-header">
-                             <div class="pull-left user-img"><img src="{{ asset('assets/img/img1.jpg') }}"
+                             <div class="pull-left user-img"><img src="{{ asset('data/user.png') }}"
                                      class="img-responsive img-circle" alt="User"></div>
-                             <p class="text-left">Florence Douglas <small>florence@gmail.com</small> </p>
+                             <p class="text-left">May Phyo <small>mayphyo@gmail.com</small> </p>
                          </li>
                          <li><a href="#"><i class="icon-profile-male"></i> My Profile</a></li>
                          <li><a href="#"><i class="icon-wallet"></i> My Balance</a></li>
@@ -43,7 +43,17 @@
                          <li role="separator" class="divider"></li>
                          <li><a href="#"><i class="icon-gears"></i> Account Setting</a></li>
                          <li role="separator" class="divider"></li>
-                         <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                         <li>
+                             <a class="dropdown-item" href="{{ route('logout') }}"
+                                 onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                 {{ __('Logout') }}
+                             </a>
+
+                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                 @csrf
+                             </form>
+                         </li>
                      </ul>
                  </li>
              </ul>

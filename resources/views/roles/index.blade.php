@@ -15,6 +15,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr style="text-align: center">
+
                                 <th>#</th>
                                 <th>Name</th>
                                 <th>Permission</th>
@@ -24,6 +25,7 @@
                         <tbody>
                             @foreach ($roles as $r)
                                 <tr style="text-align: center">
+
                                     <td>
                                         {{ $loop->iteration }}
                                     </td>

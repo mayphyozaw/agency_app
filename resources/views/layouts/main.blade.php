@@ -21,12 +21,25 @@
     <link rel="stylesheet" href="{{ asset('assets/css/themify-icons/themify-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/simple-lineicon/simple-line-icons.css') }}">
 
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')}}"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script>
 <![endif]-->
+
+
+    <style>
+        .control-label {
+            font-size: 14px;
+        }
+    </style>
 
 </head>
 
@@ -65,9 +78,10 @@
 
     <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
-@yield('script')
 
+@yield('script')
 
 <script>
     $('.del_confirm').click(function(event) {
@@ -89,6 +103,29 @@
                 form.submit();
             }
         });
+    });
+
+
+    function confirmDelete(userId) {
+        Swal.fire({
+            title: "Are you sure Delete?",
+            text: "Are you sure you want to delete this record?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let deleteUrl = "{{ route('user.delete', ':id') }}";
+                deleteUrl = deleteUrl.replace(':id', userId);
+                window.location.href = deleteUrl;
+            }
+        });
+    }
+
+    $(function() {
+        $('.select2').select2();
     });
 </script>
 

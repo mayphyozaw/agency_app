@@ -1,0 +1,91 @@
+Users => Staff
+================
+name
+email
+gender
+phone
+address
+nrc
+photo 
+nrc photo front
+nrc photo back
+householder photo
+join date
+
+
+
+
+
+Local Agent
+===============
+name
+phone
+address
+nrc
+photo
+rerion table  and township table 
+
+
+
+
+labors
+=========
+name
+photo
+gender
+phone
+address
+
+nrc
+nrc front photo
+nrc back photo
+
+Father Name
+Mother Name
+
+Qualification
+Date of Birth
+Age
+
+weight
+height
+Tattoo (တတ်တူးရှိ/မရှိ)
+Smoking(ဆေးလိပ်သောက်/မသောက်)
+Alcohol(အရက်သောက်/မသောက်)
+Marital Status (အိမ်ထောင်ရေးအခြေအနေ)
+သား/son
+သမီး/daughter
+
+Nation / Religion (လူမျိုး/ဘာသာ)
+A prominent sign (ထင်ရှားသော အမှတ်အသား)
+Working Experience
+Contact No (Own)
+Contact No (Family)
+
+Passport လျောက်/အပ်
+Apply to country
+Reason (သွားရောက်လိုသည့်အကြောင်းအရာ)
+
+passport
+passport photo
+passport issued date
+passport expired date
+place of passport
+
+owic card number
+owic card issued date
+owic card sumbit date to NPW
+
+Agent 
+bymyself
+
+country
+
+
+
+
+
+
+
+
+
